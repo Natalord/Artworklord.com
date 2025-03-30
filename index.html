@@ -4,82 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galaxy Art Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
+        @font-face {
+            font-family: 'Stage Wander';
+            src: url('StageWander.ttf') format('truetype');
+        }
+
         body {
-            font-family: 'Orbitron', sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?galaxy,stars,space') no-repeat center center fixed;
-            background-size: cover;
+            background: #0a0a1a;
             color: white;
+            font-family: 'Stage Wander', sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
         }
-        .navbar {
-            text-align: center;
-            font-size: 30px;
+
+        .header {
+            background: #222;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #00ffcc, 0 0 10px #00ffcc;
+            border-bottom: 4px solid #00ffcc;
+            display: inline-block;
+            margin: 20px auto;
         }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            text-align: center;
+
+        .title {
+            font-size: 4em;
+            text-shadow: 0 0 30px #00aaff, 0 0 15px #00aaff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 20px;
         }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .product {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-        }
-        .product img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .product h3 {
-            font-size: 24px;
-            background: linear-gradient(45deg, #ff4b1f, #1f3c88);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .buy-btn {
-            padding: 10px 20px;
-            font-size: 18px;
-            background: linear-gradient(45deg, #ff4b1f, #1f3c88);
-            color: white;
+
+        .button {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
             border: none;
+            padding: 15px 30px;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .button:hover {
+            box-shadow: 0 0 25px #ff416c, 0 0 15px #ff4b2b;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div class="navbar">Galaxy Art Store</div>
-    <div class="container">
-        <h1>Explore the Universe of Designs</h1>
-        <p>Unique cosmic-themed artwork just for you.</p>
-        <div class="products">
-            <div class="product">
-                <img src="https://source.unsplash.com/300x300/?galaxy,stars" alt="Design 1">
-                <h3>Galactic Poster</h3>
-                <p>$10.00</p>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product">
-                <img src="https://source.unsplash.com/300x300/?nebula,space" alt="Design 2">
-                <h3>Futuristic Card</h3>
-                <p>$5.00</p>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-    </div>
+    <div class="header">Galaxy Art Store</div>
+    <h1 class="title">Explore the Universe of Designs</h1>
+    <button class="button">Buy Now</button>
 </body>
 </html>
