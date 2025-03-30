@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Store</title>
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=GoodDog&display=swap" rel="stylesheet">
+    
     <!-- CSS Code -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'GoodDog', cursive;
+            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/dark_embroidery.png');
             margin: 0;
             padding: 0;
         }
         .navbar {
-            background: #007BFF;
+            background: #1a1a1a;
             padding: 15px;
             text-align: center;
-            color: white;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #ff7b00, #ff4b1f, #ff1f1f, #ff8800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .container {
             max-width: 1000px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            background: #222;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
             text-align: center;
+            color: white;
         }
         .products {
             display: grid;
@@ -37,31 +44,40 @@
             margin-top: 20px;
         }
         .product {
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            background: #333;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.05);
         }
         .product img {
             width: 100%;
             border-radius: 10px;
         }
         .product h3 {
-            margin: 10px 0;
+            margin: 15px 0 10px;
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff7b00, #ff4b1f, #ff1f1f, #ff8800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .buy-btn {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 18px;
-            background-color: #28a745;
+            background-color: #ff7b00;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 6px;
             transition: 0.3s;
+            font-weight: 400;
         }
         .buy-btn:hover {
-            background-color: #218838;
+            background-color: #d14e0f;
         }
     </style>
 </head>
