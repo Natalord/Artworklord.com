@@ -18,6 +18,11 @@
             padding: 0;
             color: white;
             overflow-x: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         .navbar {
             text-align: center;
@@ -27,6 +32,11 @@
             background: linear-gradient(45deg, #ff4b1f, #1f3c88, #5a189a, #ffb703);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px white; }
+            to { text-shadow: 0 0 20px white; }
         }
         .logo {
             display: block;
@@ -52,10 +62,16 @@
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .product:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
         .product img {
             width: 100%;
@@ -81,6 +97,7 @@
         }
         .buy-btn:hover {
             background: linear-gradient(45deg, #ffb703, #5a189a);
+            transform: scale(1.1);
         }
     </style>
 </head>
