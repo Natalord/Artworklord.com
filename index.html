@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meri Galaxy Website</title>
-    <!-- Google Font Exo 2 import kar rahe hain -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap" rel="stylesheet">
+    <title>Galaxy Art Store</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+       @font-face {
+    font-family: 'Stage Wander';
+    src: url('assets/fonts/StageWanderRegular-4ne3D.otf') format('opentype'),
+         url('assets/fonts/StageWander.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
         body {
+            background: radial-gradient(circle at center, #0a0a23 0%, #000000 70%);
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Stage Wander', sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            font-family: 'Exo 2', sans-serif;
-            color: #ffffff;
-            /* Galaxy background with stars */
-            background: radial-gradient(circle at center, #0a0a23 0%, #000000 70%);
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Stars effect ke liye pseudo-elements */
         body::before {
             content: '';
             position: fixed;
@@ -26,111 +32,97 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><circle cx="50" cy="50" r="1" fill="white"/><circle cx="150" cy="200" r="2" fill="white"/><circle cx="300" cy="100" r="1" fill="white"/><circle cx="500" cy="400" r="2" fill="white"/><circle cx="700" cy="300" r="1" fill="white"/><circle cx="200" cy="500" r="1" fill="white"/><circle cx="600" cy="150" r="2" fill="white"/></svg>') repeat;
+            background: url('stars.png') repeat;
             opacity: 0.5;
             z-index: -1;
+            animation: twinkle 10s infinite alternate;
         }
 
-        header {
+        @keyframes twinkle {
+            from { opacity: 0.3; }
+            to { opacity: 0.7; }
+        }
+
+        .header {
             background: linear-gradient(90deg, rgba(0, 0, 50, 0.8), rgba(75, 0, 130, 0.8));
-            text-align: center;
-            padding: 2rem;
-            border-bottom: 2px solid #00d4ff;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 8px; /* Stage Wander ke jaise condensed aur bold look ke liye */
-            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-            margin: 0;
-            font-weight: 700; /* Extra bold */
-        }
-
-        main {
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(10, 10, 35, 0.7);
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-        }
-
-        section h2 {
-            font-size: 2.2rem;
+            padding: 20px;
+            font-size: 4em;
             letter-spacing: 5px;
-            text-shadow: 0 0 5px #ff00ff;
             text-transform: uppercase;
-            font-weight: 700;
+            text-shadow: 0 0 20px #00ffcc, 0 0 10px #00ffcc;
+            border-bottom: 4px solid #00ffcc;
+            display: inline-block;
+            margin: 20px auto;
+            border-radius: 10px;
         }
 
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            letter-spacing: 1px;
-        }
+        .title {
+    font-family: 'Stage Wander', sans-serif;
+    font-size: 5em;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 40px #00aaff, 0 0 20px #00aaff;
+}
 
-        button {
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #ff00ff, #00d4ff);
-            color: #fff;
+        .button {
+            background: linear-gradient(90deg, #ff00ff, #00d4ff);
             border: none;
-            border-radius: 5px;
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            padding: 15px 40px;
+            font-size: 2em;
+            color: white;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.3s;
-            font-weight: 700;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: glow 1.5s infinite alternate;
         }
 
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #00d4ff, 0 0 25px #ff00ff;
+        @keyframes glow {
+            from { box-shadow: 0 0 15px #ff00ff, 0 0 10px #00d4ff; }
+            to { box-shadow: 0 0 30px #ff00ff, 0 0 20px #00d4ff; }
         }
 
-        footer {
-            text-align: center;
-            padding: 1rem;
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .content-box {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(10, 10, 35, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
             background: linear-gradient(90deg, rgba(0, 0, 50, 0.8), rgba(75, 0, 130, 0.8));
-            color: #fff;
+            color: #ddd;
+            font-size: 1.2em;
             position: fixed;
             bottom: 0;
             width: 100%;
-            border-top: 2px solid #00d4ff;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 700;
+            border-top: 2px solid #00ffcc;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Swagat Hai Meri Galaxy Website Pe</h1>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Mera Content</h2>
-            <p>Ye meri pehli website hai. Yahan main jo chahe likh sakta hoon!</p>
-            <button onclick="changeText()">Click Kijiye</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Meri Galaxy Website</p>
-    </footer>
+    <div class="header">Swagat Hai Meri Galaxy Website Pe</div>
+    <h1 class="title">Explore the Universe of Designs</h1>
+    <div class="content-box">
+        <h2>Mera Content</h2>
+        <p>Ye meri pehli website hai. Yahan main jo chahe likh sakta hoon!</p>
+        <button class="button" onclick="changeText()">Click Kijiye</button>
+    </div>
+    <div class="footer">© 2025 Meri Galaxy Website | All Rights Reserved</div>
 
     <script>
         function changeText() {
-            let paragraph = document.querySelector('p');
+            let paragraph = document.querySelector('.content-box p');
             paragraph.textContent = 'Button click kiya gaya! Ab naya text dikh raha hai!';
         }
     </script>
