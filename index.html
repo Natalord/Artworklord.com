@@ -7,12 +7,13 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stage+Wander&display=swap" rel="stylesheet">
     
     <!-- CSS Code -->
     <style>
         body {
-            font-family: 'Orbitron', sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
+            font-family: 'Stage Wander', sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?galaxy,stars,nebula') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
@@ -26,23 +27,23 @@
         }
         .navbar {
             text-align: center;
-            font-size: 28px;
+            font-size: 40px;
             font-weight: bold;
             padding: 20px;
-            background: linear-gradient(45deg, #ff4b1f, #1f3c88, #5a189a, #ffb703);
+            background: linear-gradient(45deg, #00f260, #0575e6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: glow 1.5s infinite alternate;
         }
         @keyframes glow {
-            from { text-shadow: 0 0 5px white; }
-            to { text-shadow: 0 0 20px white; }
+            from { text-shadow: 0 0 10px white; }
+            to { text-shadow: 0 0 30px white; }
         }
         .logo {
             display: block;
             margin: 0 auto 20px;
-            width: 150px;
-            filter: drop-shadow(0 0 10px white);
+            width: 200px;
+            filter: drop-shadow(0 0 15px white);
         }
         .container {
             max-width: 1200px;
@@ -61,7 +62,7 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             animation: fadeInUp 1.5s ease-in-out;
         }
@@ -71,29 +72,29 @@
         }
         .product:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
         }
         .product img {
             width: 100%;
             border-radius: 8px;
         }
         .product h3 {
-            font-size: 22px;
+            font-size: 24px;
             margin-top: 10px;
             background: linear-gradient(45deg, #ff4b1f, #1f3c88, #5a189a, #ffb703);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .buy-btn {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 25px;
+            font-size: 18px;
             background: linear-gradient(45deg, #ff4b1f, #1f3c88);
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             transition: 0.3s;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
         }
         .buy-btn:hover {
             background: linear-gradient(45deg, #ffb703, #5a189a);
@@ -102,26 +103,26 @@
     </style>
 </head>
 <body>
-    <div class="navbar">My Design Store</div>
+    <div class="navbar">Mystical Design Store</div>
     <img src="https://raw.githubusercontent.com/Natalord/Artworklord.com/main/logo.png" alt="Logo" class="logo">
     <div class="container">
-        <h1>Explore the Universe of Designs</h1>
-        <p>Find interstellar creativity and cosmic inspiration.</p>
+        <h1>Unravel Mysteries of Your Future</h1>
+        <p>Explore cosmic designs that transcend imagination.</p>
         <div class="products">
             <div class="product">
-                <img src="https://raw.githubusercontent.com/Natalord/Artworklord.com/main/1.png" alt="Design 1">
+                <img src="https://source.unsplash.com/300x300/?galaxy,stars" alt="Design 1">
                 <h3>Galactic Poster</h3>
                 <p>$10.00</p>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <div class="product">
-                <img src="https://raw.githubusercontent.com/Natalord/Artworklord.com/main/F.png" alt="Design 2">
+                <img src="https://source.unsplash.com/300x300/?nebula,space" alt="Design 2">
                 <h3>Futuristic Business Card</h3>
                 <p>$5.00</p>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <div class="product">
-                <img src="https://raw.githubusercontent.com/Natalord/Artworklord.com/main/Untitled-1.png" alt="Design 3">
+                <img src="https://source.unsplash.com/300x300/?blackhole,universe" alt="Design 3">
                 <h3>Cosmic Logo</h3>
                 <p>$15.00</p>
                 <button class="buy-btn">Buy Now</button>
