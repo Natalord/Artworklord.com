@@ -1,34 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Store</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Stage+Wander&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Art Store</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('your-galaxy-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .popup button {
+      background-color: #e74c3c;
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #c0392b;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Galaxy Store</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="products">
-        <div class="product">
-            <img src="assets/art1.jpg" alt="Artwork 1" width="200">
-            <h2>Galaxy Art</h2>
-            <p>$25.00</p>
-            <button class="buy-btn">Buy</button>
-        </div>
-    </section>
-    
-    <script src="js/script.js"></script>
+
+  <header>
+    <h1>Galaxy Art Store</h1>
+    <button class="button" onclick="openPopup()">Buy</button>
+  </header>
+
+  <div class="popup" id="buyPopup">
+    <h2>Buy this Artwork</h2>
+    <p>Would you like to purchase this beautiful galaxy art piece?</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("buyPopup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("buyPopup").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
