@@ -3,114 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Art Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       @font-face {
-    font-family: 'Stage Wander';
-    src: url('assets/fonts/StageWanderRegular-4ne3D.otf') format('opentype'),
-         url('assets/fonts/StageWander.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-        body {
-            background: radial-gradient(circle, darkred 20%, black 60%);
-            color: white;
-            font-family: 'Stage Wander', sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('assets/images/stars_background.png') repeat;
-            opacity: 0.7;
-            z-index: -1;
-        }
-
-        .header {
-            background: black;
-            padding: 10px;
-            font-size: 2.5em;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px #ff3300, 0 0 10px #ff3300;
-            border-bottom: 4px solid #ff3300;
-            display: inline-block;
-            margin: 10px auto;
-            border-radius: 50%;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .title {
-            font-size: 3.5em;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            text-shadow: 0 0 40px #ff4400, 0 0 20px #ff4400;
-            animation: slideIn 1.5s ease-in-out;
-        }
-
-        .art-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .art-item {
-            background: rgba(20, 20, 20, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .art-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .sell-button {
-            background: black;
-            border: 2px solid #ff3300;
-            padding: 10px 15px;
-            font-size: 1.1em;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .sell-button:hover {
-            box-shadow: 0 0 20px #ff3300, 0 0 30px #ff6600;
-            transform: scale(1.1);
-        }
-    </style>
-    <script>
-        function redirectToSellPage() {
-            window.location.href = 'sell.html';
-        }
-    </script>
+    <title>Galaxy Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stage+Wander&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">ArtworkLord</div>
-    <h1 class="title">Explore the Universe of Designs</h1>
-    <div class="art-grid">
-        <div class="art-item"><img src="assets/images/art1.jpg" alt="Art 1"><div class="art-description">Abstract space painting</div><div class="price">$100</div><button class="sell-button" onclick="redirectToSellPage()">Sell</button></div>
-        <div class="art-item"><img src="assets/images/art2.jpg" alt="Art 2"><div class="art-description">Nebula fantasy art</div><div class="price">$120</div><button class="sell-button" onclick="redirectToSellPage()">Sell</button></div>
-        <div class="art-item"><img src="assets/images/art3.jpg" alt="Art 3"><div class="art-description">Galactic swirl</div><div class="price">$130</div><button class="sell-button" onclick="redirectToSellPage()">Sell</button></div>
-        <div class="art-item"><img src="assets/images/art4.jpg" alt="Art 4"><div class="art-description">Eclipse dream</div><div class="price">$140</div><button class="sell-button" onclick="redirectToSellPage()">Sell</button></div>
-        <div class="art-item"><img src="assets/images/art5.jpg" alt="Art 5"><div class="art-description">Cosmic vision</div><div class="price">$150</div><button class="sell-button" onclick="redirectToSellPage()">Sell</button></div>
-    </div>
-    <div class="footer">© 2025 Meri Galaxy Website | All Rights Reserved</div>
+    <header>
+        <h1 style="font-family: 'Stage Wander', cursive;">Galaxy Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="products">
+        <div class="product">
+            <img src="assets/art1.jpg" alt="Artwork 1">
+            <h2>Galaxy Art</h2>
+            <p>$25.00</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
